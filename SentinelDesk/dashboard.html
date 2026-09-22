@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelDesk | Local Security Monitor</title>
+    <link rel="stylesheet" href="/dashboard.css">
+</head>
+<body>
+    <main class="shell">
+        <header class="topbar">
+            <div>
+                <p class="overline">Local Security Monitor</p>
+                <h1>Sentinel<span>Desk</span></h1>
+            </div>
+            <div class="topbar-actions">
+                <div class="status"><i></i> Service local actif</div>
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Activer le mode nuit" aria-pressed="false">
+                    <span class="theme-icon sun" aria-hidden="true">☼</span>
+                    <span class="theme-icon moon" aria-hidden="true">☾</span>
+                </button>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div>
+                <p class="overline">Centre de supervision</p>
+                <h2>Observer. Comprendre. Réagir.</h2>
+                <p>Un laboratoire local pour transformer des événements techniques en décisions lisibles.</p>
+            </div>
+            <button id="demo-button" class="primary-button">Generer une demonstration</button>
+        </section>
+
+        <section class="metrics" aria-label="Metriques">
+            <article><span>Total evenements</span><strong id="total">0</strong></article>
+            <article><span>Critiques</span><strong id="critical">0</strong></article>
+            <article><span>A surveiller</span><strong id="warning">0</strong></article>
+            <article><span>Activite normale</span><strong id="info">0</strong></article>
+        </section>
+
+        <section class="content-grid">
+            <div class="panel events-panel">
+                <div class="panel-heading">
+                    <div><p class="overline">Flux en direct</p><h2>Evenements recents</h2></div>
+                    <button id="refresh-button" class="ghost-button">Actualiser</button>
+                </div>
+                <div id="events" class="events"><p class="empty">Aucun evenement. Lance la demonstration pour commencer.</p></div>
+            </div>
+            <aside class="panel method-panel">
+                <p class="overline">Architecture</p>
+                <h2>Le cycle SentinelDesk</h2>
+                <ol>
+                    <li><b>01</b><span>Collecter<br><small>Recevoir un evenement local</small></span></li>
+                    <li><b>02</b><span>Analyser<br><small>Appliquer une regle explicable</small></span></li>
+                    <li><b>03</b><span>Conserver<br><small>Historiser dans SQLite</small></span></li>
+                    <li><b>04</b><span>Decider<br><small>Lire une alerte exploitable</small></span></li>
+                </ol>
+            </aside>
+        </section>
+    </main>
+    <script src="/dashboard.js"></script>
+</body>
+</html>
